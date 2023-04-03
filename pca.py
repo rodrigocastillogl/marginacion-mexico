@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn import preprocessing
 
-data_path = 'IMM_2020.csv'
+data_path = 'data/IMM_2020.csv'
 df2020 = pd.read_csv(data_path)
 
 # data matrix
