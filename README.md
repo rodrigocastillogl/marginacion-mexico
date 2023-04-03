@@ -17,4 +17,3 @@ corresponden a nueve formas de marginación en las dimensiones: educación, vivi
 7. Porcentaje de la población que habita en viviendas particulares con hacinamiento (`VHAC`).
 8. Población en localidades con menos de 5000 habitantes (`PL5000`).
 9. Población ocupada con ingresos menores a 2 salarios mínimos (`PO2SM`).
-
