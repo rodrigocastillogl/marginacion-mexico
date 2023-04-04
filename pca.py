@@ -42,3 +42,23 @@ for i in range( variance.shape[0] ):
            i + 1, '{:0.5f}'.format(variance[i]) , '{:0.5f}'.format( variance_ratio[i]*100 ) , '{:0.5f}'.format(c) ) )
 print( '-' * 70 ); print()
 # -------------------------------------------------------- #
+
+# -------------- Plot principal components --------------- #
+plt.figure( figsize = (6,3) )
+plt.plot( [ 0, loadings[0].shape[0]+1 ], [ 0, 0 ], color = 'dimgrey')
+for i in range(loadings[0].shape[0]):
+    plt.plot( [ i+1, i+1 ], [ 0, loadings[0][i] ], color = 'silver')
+    plt.text( i + 0.7, loadings[0][i] + np.sign(loadings[0][i]) * 0.05,
+              '{:.3f}'.format(loadings[0][i]), size = 7 )
+plt.scatter( [i for i in range(1,10)], loadings[0], color = 'silver', marker = 'o')
+
+plt.title('Primer componente principal ')
+plt.xlabel(''); plt.ylabel('')
+plt.ylim( [-0.7, 0.7] )
+plt.xlim( [ 0, loadings[0].shape[0]+1 ] )
+plt.xticks( [i for i in range(1,10)] )
+plt.tight_layout()
+plt.show()
+# plt.savefig('imgs/componente1.pdf')
+
+# --------------------------------------------------------- #
