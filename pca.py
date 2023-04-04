@@ -58,7 +58,6 @@ plt.ylim( [-0.7, 0.7] )
 plt.xlim( [ 0, loadings[0].shape[0]+1 ] )
 plt.xticks( [i for i in range(1,10)] )
 plt.tight_layout()
-plt.show()
-# plt.savefig('imgs/componente1.pdf')
-
+plt.savefig('imgs/pc1.pdf')
+plt.savefig('imgs/pc1.png')
 # --------------------------------------------------------- #
