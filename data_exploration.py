@@ -60,5 +60,5 @@ if __name__ == '__main__':
     # boxplot
     box_plot( df.loc[:,'ANALF':'PO2SM'], 'boxplot.pdf')
 
-    # boxplot
+    # pairsplot
     pairs_plot( df.loc[:,'ANALF':'PO2SM'], 'pairsplot.pdf')
