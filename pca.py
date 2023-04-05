@@ -110,4 +110,3 @@ if __name__ == '__main__':
     # plot 1st and 2nd PC
     plot_pc( loadings, 1, 'pc1.pdf' )
     plot_pc( loadings, 2, 'pc2.pdf' )
-
