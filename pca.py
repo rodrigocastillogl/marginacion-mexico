@@ -16,8 +16,8 @@ def pca(data_path):
     ------
         * loadings : principal components vectors.
         * scores   : transformed data.
-        * variance : eigenvalues/variances
-        * variance_ratio : explained variance ratio
+        * variance : eigenvalues/variances.
+        * variance_ratio : explained variance ratio.
     """
     
     df = pd.read_csv(data_path)
