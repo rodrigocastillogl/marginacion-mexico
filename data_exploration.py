@@ -41,7 +41,6 @@ def pairs_plot( data_frame, name = '' ):
     pairs = sns.pairplot( data_frame, corner = True, diag_kind="kde", height = 1.4,
                           plot_kws = dict( alpha = 0.3, size = 1, color = 'silver', edgecolor = 'k'),
                           diag_kws = dict( color = 'grey' ) )
-    # pairs.fig.suptitle( 'Pairs Plot', fontsize = 'xx-large' )
     plt.tight_layout()
     if name == '':
         plt.show()
