@@ -6,12 +6,12 @@ from matplotlib import pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn import preprocessing
 
-def pca(data_path):
+def pca(data_frame):
     """
     PCA using sklearn.
     Input
     -----
-        * data_path : data file name.
+        * data_frame : pandas data frame.
     Output
     ------
         * loadings : principal components vectors.
@@ -20,8 +20,8 @@ def pca(data_path):
         * variance_ratio : explained variance ratio.
     """
     
-    df = pd.read_csv(data_path)
-    X = np.array( df.loc[:,'ANALF':'PO2SM'] )
+
+    X = np.array( data_frame.loc[:,'ANALF':'PO2SM'] )
     
     # data standardization
     Xc = preprocessing.scale(X, axis = 0)
@@ -102,7 +102,9 @@ def plot_pc(loadings, n, img_name = '' ):
 if __name__ == '__main__':
 
     data_path = 'data/IMM_2020.csv'
-    loadings, scores, variance, variance_ratio = pca(data_path)
+    df = pd.read_csv(data_path)
+
+    loadings, scores, variance, variance_ratio = pca(df)
 
     # table
     pca_table( variance, variance_ratio )
