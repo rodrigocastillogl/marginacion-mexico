@@ -49,19 +49,26 @@ def pca_table(variance, variance_ratio):
     ------
         * None
     """
-    
+
     print(); print('PCA  :  Tabla de varianza expliacada')
     print('-' * 70)
     print( ' {}  |   {}   |   {}   |   {}'.format( 'Componente', 'Valor propio'   ,
                                                '% de varianza', '% acumulado' ) )
     print('-' * 70)
     
-    c = 0
+    cvariance_ratio = np.cumsum( variance_ratio )
     for i in range( variance.shape[0] ):
-        c += variance_ratio[i] * 100
         print( '{:^10d}   |       {:^.5}      |        {:^.5}      |       {:^.5}'.format(
-            i + 1, '{:0.5f}'.format(variance[i]) , '{:0.5f}'.format( variance_ratio[i]*100 ) , '{:0.5f}'.format(c) ) )
+            i + 1, '{:0.5f}'.format( variance[i] )     ,
+            '{:0.5f}'.format( variance_ratio[i]*100 )  ,
+            '{:0.5f}'.format( cvariance_ratio[i]*100 ) )
+        )
     print( '-' * 70 ); print()
+    resume_df = pd.DataFrame( { 'Componente' : np.arange( 1, len(variance)+1 )   ,
+                                'Valor propio' : variance                        ,
+                                'Varianza explicada' : variance_ratio * 100      ,
+                                'Varianza explicada acumulada' : cvariance_ratio } )
+    resume_df.to_csv('data/pca_table.csv', index = False)
 
 
 def plot_pc(loadings, n, img_name = '' ):
