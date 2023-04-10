@@ -106,12 +106,52 @@ def plot_pc(loadings, n, img_name = '' ):
         plt.show()
 
 
+def plot2D_pca( scores, labels = None, img_name = '' ):
+    """
+    Plot PCA scores (2D).
+    Input
+    -----
+        * scores  : scores from PCA (2 PC).
+        * labels  : data labels if exist.
+        *img_name : name to save image.
+    Output
+    ------
+        * None
+    """
+    
+    plt.figure( figsize = (6,4) )
+    plt.xlabel('Primer componente principal ')
+    plt.ylabel('Segundo componente principal ')
+    plt.title('Reducción de dimensionalidad - PCA', fontsize = 'xx-large')
+    if labels is None:
+        plt.scatter( scores[:, 0], scores[:, 1], c = 'silver' , s = 20,
+                     alpha = 0.5, edgecolors = 'k', linewidths = 0.7)
+    else:
+        plt.scatter( scores[:, 0], scores[:, 1], c = labels , cmap = 'YlOrRd',
+                     s = 20, alpha = 0.5, edgecolors = 'k', linewidths = 0.7)
+    plt.tight_layout()
+    
+    if img_name != '':
+        plt.savefig('imgs/' + img_name)
+    else:
+        plt.show()
+
+
 if __name__ == '__main__':
 
     data_path = 'data/IMM_2020.csv'
     df = pd.read_csv(data_path)
 
+    # PCA
     loadings, scores, variance, variance_ratio = pca(df)
+
+    # labels
+    labels = np.zeros( len(df) ).astype('int')
+    labels[ list( df.index[ df['GM_2020'] == 'Muy bajo' ] ) ] = 0
+    labels[ list( df.index[ df['GM_2020'] == 'Bajo' ] ) ] = 1
+    labels[ list( df.index[ df['GM_2020'] == 'Medio' ] ) ] = 2
+    labels[ list( df.index[ df['GM_2020'] == 'Alto' ] ) ] = 3
+    labels[ list( df.index[ df['GM_2020'] == 'Muy alto' ] ) ] = 4
 
     # table
     pca_table( variance, variance_ratio )
@@ -119,3 +159,6 @@ if __name__ == '__main__':
     # plot 1st and 2nd PC
     plot_pc( loadings, 1, 'pc1.pdf' )
     plot_pc( loadings, 2, 'pc2.pdf' )
+
+    # 2D PCA plot
+    plot2D_pca (scores, labels = labels, img_name = 'plot_pca.pdf')
