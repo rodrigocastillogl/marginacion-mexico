@@ -34,8 +34,4 @@ En la tabla se muestran 7 estadísticas que resumen los indicadores de pobreza a
 indicadores, esto se puede verificar en los Boxplots. Es por esto que se estandarizan los indicadores (media igual a cero y desviación estándar igual a 1); esto es
 muy importante para PCA, donde los indicadores con una variabilidad alta pueden opacar a otros indicadores.
 
-
-
-Depending on your tool - you can also inject HTML into markdown.
-
 ![Table 1](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/table.png)
