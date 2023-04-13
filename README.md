@@ -30,8 +30,10 @@ socio-económicas existentes en un momento determinado, relevante como herramien
 
 ## Descripción de los datos
 
-En la tabla se muestran 7 estadísticas que resumen los indicadores de pobreza a nivel municipal. Existen diferencias significativas entre la variabilidad de algunos
-indicadores, esto se puede verificar en los Boxplots. Es por esto que se estandarizan los indicadores (media igual a cero y desviación estándar igual a 1); esto es
+En la Tabla se muestran 7 estadísticas que resumen los indicadores de pobreza a nivel municipal. Existen diferencias significativas entre la variabilidad de algunos
+indicadores, esto se puede ver también en los Boxplots. Es por esto que se estandarizan los indicadores (media igual a cero y desviación estándar igual a 1); esto es
 muy importante para PCA, donde los indicadores con una variabilidad alta pueden opacar a otros indicadores.
 
 ![Table 1](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/table.png)
+
+![Boxplot](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/boxplot.png)
