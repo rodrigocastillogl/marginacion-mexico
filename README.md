@@ -27,3 +27,11 @@ corresponden a nueve formas de marginación en las dimensiones: educación, vivi
 Es preciso emplear métodos de análisis multivariado y reducción de dimensionalidad. El objetivo último es una medición resultante única derivada de alguna
 forma de agregación de los indicadores. El CONAPO construye una medida denominada *Indice de Marginación* (IM). El IM permite identificar las disparidades
 socio-económicas existentes en un momento determinado, relevante como herramienta analítica y operativa para la definición y focalización de políticas públicas.
+
+## Descripción de los datos
+
+En la tabla se muestran 7 estadísticas que resumen los indicadores de pobreza a nivel municipal. Existen diferencias significativas entre la variabilidad de algunos
+indicadores, esto se puede verificar en los Boxplots. Es por esto que se estandarizan los indicadores (media igual a cero y desviación estándar igual a 1); esto es
+muy importante para PCA, donde los indicadores con una variabilidad alta pueden opacar a otros indicadores.
+
+![image](./imgs/table.pdf)
