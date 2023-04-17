@@ -30,7 +30,7 @@ estimadas exhiben un comportamiento unimodal. Se puede ver que en algunos indica
 en otros casos existe, aunque no de manera muy notable, cierta asimetría. en las distribuciones de los indicadores. Haremos entonces, supuestos de normalidad y adelante
 se aplicará PCA.
 
-![Pairsplot](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/pairsplot.png)
+<img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/pairsplot.png" width = 70% heigh t = 70%>
 
 En la Tabla se muestran 7 estadísticas que resumen los indicadores de pobreza a nivel municipal. Existen diferencias significativas entre la variabilidad de algunos
 indicadores, esto se puede ver también en los *Boxplots*. Es por esto que se estandarizan los indicadores (media igual a cero y desviación estándar igual a 1); esto es
