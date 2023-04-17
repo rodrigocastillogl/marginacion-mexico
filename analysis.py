@@ -66,5 +66,5 @@ if __name__ == '__main__':
     new_mi  = pca_mi(scores, variance_ratio, 2)
 
     # Correlation
-    r = compare_mi(data_mi, new_mi, 'comparison.pdf')
+    r = compare_mi(data_mi, new_mi, 'comparison.png')
     print( 'R: {:.4f}'.format( r ) )

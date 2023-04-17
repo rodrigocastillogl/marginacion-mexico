@@ -57,7 +57,7 @@ if __name__ == '__main__':
     df.loc[:,'ANALF':'PO2SM'].describe().to_csv( 'data/resume.csv' )
 
     # boxplot
-    box_plot( df.loc[:,'ANALF':'PO2SM'], 'boxplot.pdf')
+    box_plot( df.loc[:,'ANALF':'PO2SM'], 'boxplot.png')
 
     # pairsplot
-    pairs_plot( df.loc[:,'ANALF':'PO2SM'], 'pairsplot.pdf')
+    pairs_plot( df.loc[:,'ANALF':'PO2SM'], 'pairsplot.png')

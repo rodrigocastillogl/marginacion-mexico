@@ -157,8 +157,8 @@ if __name__ == '__main__':
     pca_table( variance, variance_ratio )
 
     # plot 1st and 2nd PC
-    plot_pc( loadings, 1, 'pc1.pdf' )
-    plot_pc( loadings, 2, 'pc2.pdf' )
+    plot_pc( loadings, 1, 'pc1.png' )
+    plot_pc( loadings, 2, 'pc2.png' )
 
     # 2D PCA plot
-    plot2D_pca (scores, labels = labels, img_name = 'plot_pca.pdf')
+    plot2D_pca (scores, labels = labels, img_name = 'plot_pca.png')
