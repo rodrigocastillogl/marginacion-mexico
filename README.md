@@ -30,10 +30,18 @@ socio-económicas existentes en un momento determinado, relevante como herramien
 
 ## Descripción de los datos
 
+En la Figura se muestra el *Pairsplot* de los 9 indicadores de pobreza. Se observa que, en la mayoría de los casos (excepto para el indicador `PL500`), las distribuciones
+estimadas exhiben un comportamiento unimodal. Se puede ver que en algunos indicadores como `SBASC` y `VHAC`, la distribución estimada es bastante simétrica, mientras que
+en otros casos existe, aunque no de manera muy notable, cierta asimetría. en las distribuciones de los indicadores. Haremos entonces, supuestos de normalidad y adelante
+se aplicará PCA.
+
+![Table 1](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/pairsplot.png)
+
 En la Tabla se muestran 7 estadísticas que resumen los indicadores de pobreza a nivel municipal. Existen diferencias significativas entre la variabilidad de algunos
-indicadores, esto se puede ver también en los Boxplots. Es por esto que se estandarizan los indicadores (media igual a cero y desviación estándar igual a 1); esto es
+indicadores, esto se puede ver también en los *Boxplots*. Es por esto que se estandarizan los indicadores (media igual a cero y desviación estándar igual a 1); esto es
 muy importante para PCA, donde los indicadores con una variabilidad alta pueden opacar a otros indicadores.
 
 ![Table 1](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/table.png)
 
 ![Boxplot](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/boxplot.png)
+ 
