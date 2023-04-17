@@ -30,15 +30,15 @@ estimadas exhiben un comportamiento unimodal. Se puede ver que en algunos indica
 en otros casos existe, aunque no de manera muy notable, cierta asimetría. en las distribuciones de los indicadores. Haremos entonces, supuestos de normalidad y adelante
 se aplicará PCA.
 
-<img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/pairsplot.png" width = 70% heigh t = 70%>
+<img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/pairsplot.png" width = 70% height = 70%>
 
 En la Tabla se muestran 7 estadísticas que resumen los indicadores de pobreza a nivel municipal. Existen diferencias significativas entre la variabilidad de algunos
 indicadores, esto se puede ver también en los *Boxplots*. Es por esto que se estandarizan los indicadores (media igual a cero y desviación estándar igual a 1); esto es
 muy importante para PCA, donde los indicadores con una variabilidad alta pueden opacar a otros indicadores.
 
-![Table 1](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/table.png)
+<img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/table.png" width = 80% height = 80%>
 
-![Boxplot](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/boxplot.png)
+<img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/boxplot.png" width = 70% height = 70%>
  
 
  ## Índice de Marginación
@@ -66,11 +66,12 @@ En PCA transformamos linealmente un conjunto de $d$ variables correlacionadas en
 valores y vectores propios de la matriz de correlación. La siguiente Tabla muestra los valores propios (varianza de los componentes) y la varianza explicada; gran parte de la
 variabilidad de los datos se encuentra en su proyección de los datos en los 2 primeros CP.
 
-![Table 2](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/table_pca.png)
+<img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/table_pca.png" width = 50% height = 50%>
 
 La siguiente Figura muestra la proyección de los datos los dos primeros CP; se despliegan clasificados según el GM generado por el CONAPO. Podemos observar que las fronteras
 de clasificación (a pesar de no ser del todo distinguibles) marcan intervalos a lo largo del primer CP, con una ligera inclinación en orientación al segundo CP.
 
-![Plot PCA](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/plot_pca.png)
+<img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/plot_pca.png" width = 100% height = 100%>
+
 
 ### Indice de Marginación basado en PCA
