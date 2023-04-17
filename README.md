@@ -54,7 +54,7 @@ socio-económicas relevante como herramienta analítica y operativa para la defi
 
 El IM se construye empleando el método de distancia de Pena-Trapero (conocido como método ${DP}_2$); se define:
 
-$$IM = \sum_{j=1}^n \frac{d_{ij}}{\sigma_j} \left( 1 - R^2_{j,j-1,..., 1} \right)$$
+$$IM = \sum_{j=1}^d \frac{d_{ij}}{\sigma_j} \left( 1 - R^2_{j,j-1,..., 1} \right)$$
 
 donde $d_{ij} = |I_j^i - I_j^r|$ es la distancia en la $j$-ésima variable (indicador) del municipio $i$ respecto a la referencia $I^r = (I_1^r, I_2^r, ...)$ , 
 $\sigma_j$ es la desviación estándar de la $j$-ésima variable y $R^2_{j,j-1,..., 1}$ es el coeficientecde determinación de la regresión del indicador $I_j$ con respecto
@@ -93,9 +93,9 @@ coordenada del primer CP y $I_j^i$ es el valor del $j$-ésimo indicador para el 
 
 El mismo procedimiento se puede emplear para calcular $A_2^i$, $A_3^i$, ..., $A_9^i$ correspondientes a los otros CP. Es posible hacer una suma ponderada sobre estos
 índices $A_k^i$ para $k = 1, 2, ..., m$, siendo el $m$ el número de CP usados. Los pesos de la ponderación están dados por la fracción de varianza explicada de
-cada CP (\lambda_k). Definimos entonces un índice sintético basado en PCA como:
+cada CP ($\lambda_k$). Definimos entonces un índice sintético basado en PCA como:
 
-$${IM}^i_{PCA} = \sum_{k=1}^m \lambda_k A_k^i = - \sum_{k=1}^m \lambda_k \left( \sum_{j=1} \alpha_{kj} I_j^i \right)$$
+$${IM}^i_{PCA} \ = \ \sum_{k=1}^m \lambda_k A_k^i \ = \ - \sum_{k=1}^m \lambda_k \left( \sum_{j=1}^d \alpha_{kj} I_j^i \right)$$
 
 Este índice se calculó para todos los municipios utilizando dos CP (m = 2). El índice basado en PCA muestra una correspondencia fuertemente lineal con el índice IM basado en
 distancia ${DP}_2$ (R = 0.9964, véase la siguiente Figura).
