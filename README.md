@@ -82,4 +82,24 @@ de clasificación (a pesar de no ser del todo distinguibles) marcan intervalos a
 <img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/plot_pca.png" width = 80% height = 80%>
 </p>
 
-### Indice de Marginación basado en PCA
+### Índice de Marginación basado en PCA
+
+Proyectar los datos en uno de los CP es una suma pondera de los indicadores. Así, para el primer CP se puede considerar un índice de marginación sintético dado por:
+
+$$A_1^i = - \sum_{j=1}^d \alpha_{1j} I_j^i$$
+
+donde $A_j^i$ es el índice sintético calculado para el $i$-ésimo municipio usando su proyección en el primer componente principal, $α_{1j}$ es el valor de la $j$-ésima
+coordenada del primer CP y $I_j^i$ es el valor del $j$-ésimo indicador para el $i$-ésimo municipio.
+
+El mismo procedimiento se puede emplear para calcular $A_2^i$, $A_3^i$, ..., $A_9^i$ correspondientes a los otros CP. Es posible hacer una suma ponderada sobre estos
+índices $A_k^i$ para $k = 1, 2, ..., m$, siendo el $m$ el número de CP usados. Los pesos de la ponderación están dados por la fracción de varianza explicada de
+cada CP (\lambda_k). Definimos entonces un índice sintético basado en PCA como:
+
+$${IM}^i_{PCA} = \sum_{k=1}^m \lambda_k A_k^i = - \sum_{k=1}^m \lambda_k \left( \sum_{j=1} \alpha_{kj} I_j^i \right)$$
+
+Este índice se calculó para todos los municipios utilizando dos CP (m = 2). El índice basado en PCA muestra una correspondencia fuertemente lineal con el índice IM basado en
+distancia ${DP}_2$ (R = 0.9964, véase la siguiente Figura).
+
+<p align="center">
+<img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/comparison.png" width = 80% height = 80%>
+</p>
