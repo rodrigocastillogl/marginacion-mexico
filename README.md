@@ -28,10 +28,10 @@ Es preciso emplear métodos de análisis multivariado y reducción de dimensiona
 forma de agregación de los indicadores. El CONAPO construye una medida denominada *Indice de Marginación* (IM), que permite identificar las disparidades
 socio-económicas relevante como herramienta analítica y operativa para la definición y focalización de políticas públicas.
 
-El IM se construye empleando el método de distancia de Pena-Trapero, también conocido como método ${DP}_2$; se define:
+El IM se construye empleando el método de distancia de Pena-Trapero (conocido como método ${DP}_2$); se define:
 
 $$IM = \sum_{j=1}^n \frac{d_{ij}}{\sigma_j} \left( 1 - R^2_{j,j-1,..., 1} \right)$$
-
+
 donde $d_{ij} = |I_j^i - I_j^r|$ es la distancia en la $j$-ésima variable (indicador) del municipio $i$ respecto a la referencia $I^r = (I_1^r, I_2^r, ...) , 
 $\sigma_j$ es la desviación estándar de la $j$-ésima variable y $R^2_i$ es el coeficientecde determinación de la regresión del indicador $I_j$ con respecto
 a los otros indicadores ($I_{j−1}$, $I_{j−2}$, ..., $I_1$).
