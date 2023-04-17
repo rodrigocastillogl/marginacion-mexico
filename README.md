@@ -33,7 +33,7 @@ El IM se construye empleando el método de distancia de Pena-Trapero (conocido c
 $$IM = \sum_{j=1}^n \frac{d_{ij}}{\sigma_j} \left( 1 - R^2_{j,j-1,..., 1} \right)$$
 
 donde $d_{ij} = |I_j^i - I_j^r|$ es la distancia en la $j$-ésima variable (indicador) del municipio $i$ respecto a la referencia $I^r = (I_1^r, I_2^r, ...)$ , 
-$\sigma_j$ es la desviación estándar de la $j$-ésima variable y $R^2_i$ es el coeficientecde determinación de la regresión del indicador $I_j$ con respecto
+$\sigma_j$ es la desviación estándar de la $j$-ésima variable y $R^2_{j,j-1,..., 1}$ es el coeficientecde determinación de la regresión del indicador $I_j$ con respecto
 a los otros indicadores ($I_{j−1}$, $I_{j−2}$, ..., $I_1$).
 
 Luego de la obtención del IM, los valores se clasificaron con el método de Dalenius y Hodges para obtener el grado de marginación (GM). Se clasifican en cinco
