@@ -22,22 +22,6 @@ corresponden a nueve formas de marginación en las dimensiones: educación, vivi
 8. Población en localidades con menos de 5000 habitantes (`PL5000`).
 9. Población ocupada con ingresos menores a 2 salarios mínimos (`PO2SM`).
 
-## Índice de Marginación
-
-Es preciso emplear métodos de análisis multivariado y reducción de dimensionalidad. El objetivo último es una medición resultante única derivada de alguna
-forma de agregación de los indicadores. El CONAPO construye una medida denominada *Indice de Marginación* (IM), que permite identificar las disparidades
-socio-económicas relevante como herramienta analítica y operativa para la definición y focalización de políticas públicas.
-
-El IM se construye empleando el método de distancia de Pena-Trapero (conocido como método ${DP}_2$); se define:
-
-$$IM = \sum_{j=1}^n \frac{d_{ij}}{\sigma_j} \left( 1 - R^2_{j,j-1,..., 1} \right)$$
-
-donde $d_{ij} = |I_j^i - I_j^r|$ es la distancia en la $j$-ésima variable (indicador) del municipio $i$ respecto a la referencia $I^r = (I_1^r, I_2^r, ...)$ , 
-$\sigma_j$ es la desviación estándar de la $j$-ésima variable y $R^2_{j,j-1,..., 1}$ es el coeficientecde determinación de la regresión del indicador $I_j$ con respecto
-a los otros indicadores ($I_{j−1}$, $I_{j−2}$, ..., $I_1$).
-
-Luego de la obtención del IM, los valores se clasificaron con el método de Dalenius y Hodges para obtener el grado de marginación (GM). Se clasifican en cinco
-categorías ordinales: muy bajo, bajo, medio, alto, muy alto.
 
 ## Descripción de los datos
 
@@ -56,4 +40,23 @@ muy importante para PCA, donde los indicadores con una variabilidad alta pueden 
 
 ![Boxplot](https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/boxplot.png)
  
+
+ ## Índice de Marginación
+
+Es preciso emplear métodos de análisis multivariado y reducción de dimensionalidad. El objetivo último es una medición resultante única derivada de alguna
+forma de agregación de los indicadores. El CONAPO construye una medida denominada *Indice de Marginación* (IM), que permite identificar las disparidades
+socio-económicas relevante como herramienta analítica y operativa para la definición y focalización de políticas públicas.
+
+El IM se construye empleando el método de distancia de Pena-Trapero (conocido como método ${DP}_2$); se define:
+
+$$IM = \sum_{j=1}^n \frac{d_{ij}}{\sigma_j} \left( 1 - R^2_{j,j-1,..., 1} \right)$$
+
+donde $d_{ij} = |I_j^i - I_j^r|$ es la distancia en la $j$-ésima variable (indicador) del municipio $i$ respecto a la referencia $I^r = (I_1^r, I_2^r, ...)$ , 
+$\sigma_j$ es la desviación estándar de la $j$-ésima variable y $R^2_{j,j-1,..., 1}$ es el coeficientecde determinación de la regresión del indicador $I_j$ con respecto
+a los otros indicadores ($I_{j−1}$, $I_{j−2}$, ..., $I_1$).
+
+Luego de la obtención del IM, los valores se clasificaron con el método de Dalenius y Hodges para obtener el grado de marginación (GM). Se clasifican en cinco
+categorías ordinales: muy bajo, bajo, medio, alto, muy alto.
+
+
 ## Análisis de datos
