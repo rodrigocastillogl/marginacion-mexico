@@ -97,8 +97,8 @@ cada CP ($\lambda_k$). Definimos entonces un índice sintético basado en PCA co
 
 $${IM}^i_{PCA} \ = \ \sum_{k=1}^m \lambda_k A_k^i \ = \ - \sum_{k=1}^m \lambda_k \left( \sum_{j=1}^d \alpha_{kj} I_j^i \right)$$
 
-Este índice se calculó para todos los municipios utilizando dos CP (m = 2). El índice basado en PCA muestra una correspondencia fuertemente lineal con el índice IM basado en
-distancia ${DP}_2$ (R = 0.9964, véase la siguiente Figura).
+Este índice se calculó para todos los municipios utilizando dos CP ($m = 2$). El índice basado en PCA muestra una correspondencia fuertemente lineal con el índice basado en
+distancia ${DP}_2$ ($R = 0.996$, véase la siguiente Figura).
 
 <p align="center">
 <img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/comparison.png" width = 80% height = 80%>
