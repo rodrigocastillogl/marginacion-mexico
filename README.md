@@ -67,9 +67,9 @@ categorías ordinales: muy bajo, bajo, medio, alto, muy alto.
 
 ### Análisis de Componentes Principales
 
-En PCA transformamos linealmente un conjunto de $d$ variables correlacionadas en otro conjunto de $p$ variables no correlacionadas (con $p \leq d$); esto a partir de los
-valores y vectores propios de la matriz de correlación. La siguiente Tabla muestra los valores propios (varianza de los componentes) y la varianza explicada; gran parte de la
-variabilidad de los datos se encuentra en su proyección de los datos en los 2 primeros CP.
+En PCA transformamos linealmente un conjunto de $d$ variables correlacionadas en otro conjunto de $p$ variables no correlacionadas (con $p \leq d$); esto a
+partir de los valores y vectores propios de la matriz de correlación. La siguiente Tabla muestra los valores propios (varianza de los componentes) y la
+varianza explicada; gran parte de la variabilidad de los datos se encuentra en su proyección de los datos en los 2 primeros CP.
 
 <p align="center">
 <img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/table_pca.png" width = 60% height = 60%>
@@ -103,3 +103,13 @@ distancia ${DP}_2$ ($R = 0.996$, véase la siguiente Figura).
 <p align="center">
 <img src = "https://github.com/rodrigocastillogl/marginacion_mexico/blob/main/imgs/comparison.png" width = 80% height = 80%>
 </p>
+
+
+## Conclusiones
+
+* Se observa que los valores del primer CP son casi constantes (suma ponderada con el mismo peso en todos los indicadores), por lo que la proyección de
+cada observación sobre el primer CP se puede interpretar como un promedio de los indicadores de un municipio particular.
+
+* También, la proyección de los datos sobre el segundo componente principal se puede interpretar como una medida de contraste o diferencia entre el promedio de los indicadores `OVSDE`, `OVSEE` e `OVSAE` (servicios en vivienda: drenaje, electricidad y agua) y el promedio de los indicadores `SBASC`,`PL5000` e `PO2SM` (nivel de escolaridad e ingresos).
+
+* El índice de marginación basado en PCA muestra una correspondencia fuertemente lineal con el índice $IM$ propuesto por CONAPO.
