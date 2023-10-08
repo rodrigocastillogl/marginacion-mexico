@@ -27,7 +27,7 @@ corresponden a nueve formas de marginación en las dimensiones: educación, vivi
 
 En la Figura se muestra el *Pairsplot* de los 9 indicadores de pobreza. Se observa que, en la mayoría de los casos (excepto para el indicador `PL500`), las distribuciones
 estimadas exhiben un comportamiento unimodal. Se puede ver que en algunos indicadores como `SBASC` y `VHAC`, la distribución estimada es bastante simétrica, mientras que
-en otros casos existe, aunque no de manera muy notable, cierta asimetría. en las distribuciones de los indicadores. Haremos entonces, supuestos de normalidad y adelante
+en otros casos existe, aunque no de manera muy notable, cierta asimetría en las distribuciones de los indicadores. Haremos entonces, supuestos de normalidad y adelante
 se aplicará PCA.
 
 <p align="center">
